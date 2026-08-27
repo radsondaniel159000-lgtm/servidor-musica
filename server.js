@@ -54,9 +54,9 @@ async function processarBusca(query, res) {
             canal: video.author.name,
             capa: video.thumbnail,
             url: video.url,
-            // Links diretos para conversores web ativos
-            linkMp3: `https://ytmp3.nu/V/youtube/${video.videoId}`,
-            linkMp4: `https://ytmp3.nu/V/mp4/${video.videoId}`
+            // Passa a URL completa codificada para preencher o campo do conversor automaticamente
+            linkMp3: `https://loader.to/api/card/?url=${encodeURIComponent(video.url)}&f=mp3`,
+            linkMp4: `https://loader.to/api/card/?url=${encodeURIComponent(video.url)}&f=720`
         }));
 
         res.json({
