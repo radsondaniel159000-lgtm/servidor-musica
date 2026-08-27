@@ -54,8 +54,9 @@ async function processarBusca(query, res) {
             canal: video.author.name,
             capa: video.thumbnail,
             url: video.url,
-            linkMp3: `https://api.vevioz.com/api/button/mp3/${video.videoId}`,
-            linkMp4: `https://api.vevioz.com/api/button/videos/${video.videoId}`
+            // Provedor público de download atualizado
+            linkMp3: `https://cobalt.tools/#${encodeURIComponent(video.url)}`,
+            linkMp4: `https://y2mate.is/pt/download?url=${encodeURIComponent(video.url)}`
         }));
 
         res.json({
