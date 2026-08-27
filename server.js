@@ -54,9 +54,9 @@ async function processarBusca(query, res) {
             canal: video.author.name,
             capa: video.thumbnail,
             url: video.url,
-            // Provedor público de download atualizado
-            linkMp3: `https://cobalt.tools/#${encodeURIComponent(video.url)}`,
-            linkMp4: `https://y2mate.is/pt/download?url=${encodeURIComponent(video.url)}`
+            // Links diretos para conversores web ativos
+            linkMp3: `https://ytmp3.nu/V/youtube/${video.videoId}`,
+            linkMp4: `https://ytmp3.nu/V/mp4/${video.videoId}`
         }));
 
         res.json({
